@@ -15,6 +15,9 @@ export class SmallCardComponent implements OnInit {
   @Input()
   Id: string = "0"
 
+  @Input()
+  recipeName: string = ""
+
   constructor() { }
 
   ngOnInit(): void {

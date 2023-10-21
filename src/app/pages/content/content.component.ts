@@ -11,8 +11,11 @@ export class ContentComponent implements OnInit {
 
   @Input()
   photoCover: string = ""
-  contentTitle: string = "MINHA NOTÍCIA"
-  contentDescription: string = "olá mundo"
+  contentTitle: string | undefined = ""
+  ingredients: string[] | undefined = [""]
+  preparationMethod: string[] | undefined = [""]
+  portions: string | undefined = ""
+  preparationTime: string | undefined = ""
   private id:string | null = "0"
 
   constructor(
@@ -27,15 +30,17 @@ export class ContentComponent implements OnInit {
     this.setValuesToComponent(this.id)
   }
 
-  setValuesToComponent(id:string | null) {
+  setValuesToComponent(id:string | null ) {
     const result = dataFake.filter(
       article => article.id == id
       )[0]
 
-      this.contentTitle = result.title
-      this.contentDescription = result.description
+      this.contentTitle = result.recipeName
       this.photoCover = result.photoCover
-
+      this.ingredients = result.ingredients
+      this.preparationMethod = result.preparationMethod
+      this.portions = result.portions
+      this.preparationTime = result.preparationTime
     }
 
 }

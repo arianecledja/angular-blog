@@ -10,9 +10,33 @@
   <div class="content__description">
     <a [routerLink]="['']"><< VOLTAR</a>
 
-    <p>
-      {{ contentDescription }}
-    </p>
+    <div class="container__small-card__separador">
+      <hr>
+    </div>
+    
+    <div class="container__small-card__receipt">
+      
+      <div class="container__small-card__ingredients">
+        <h3>Ingredientes</h3>
+        <ul>
+          <li *ngFor="let i of ingredients">{{i}}</li>
+        </ul>
+      </div>
+    
+      <div class="container__small-card__preparation-method">
+        <h3>Modo de Preparo</h3>
+        <ul>
+          <li *ngFor="let pm of preparationMethod">{{pm}}</li>
+        </ul>
+      </div>
+    
+      <div class="container__small-card__details">
+        <p>Rendimento: <span>{{portions}}</span></p>
+        <p>Tempo de preparo: <span>{{preparationTime}}</span></p>
+      </div>
+    </div>
+
   </div>
+  
 
 </div>

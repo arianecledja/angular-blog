@@ -1,12 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,700&display=swap');
+
 .container__menu-title {
   color: white;
+  text-transform: uppercase;
 }
 
 .container__menu-title > h1 {
   margin-top: 15px;
   margin-bottom: 15px;
-  font-size: 135px;
-  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 35px;
+  font-family: 'Nunito Sans', sans-serif;
   display: flex;
   justify-content: center;
 }
